@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <div class="card">
+    <div class="card-header">
+      <b>Discogs settings</b>
+    </div>
+    <div class="card-body">
+      {% if config.credentials_ok %}
+        Retrieve Discogs data &nbsp;
+        <a href="/simulate_etl" class="btn btn-primary btn-sm" id="btn_start_etl">Start</a>
+        <br />
+        <br />
+        <div id="loadingCard" class="card" style="display: none">
+          <div id="statusDiv" class="card-header"></div>
+          <div class="card-body">
+            <div id="collectionItemDiv" class="p-3">Collection items</div>
+            <div id="progressCollectionDiv" class="progress-container w-100 p-3"></div>
+            <div id="collectionArtistDiv" class="p-3">Artist progress</div>
+            <div id="progressArtistDiv" class="w-100 p-3"></div>
+          </div>
+        </div>
+      {% else %}
+        Discogs authentication &nbsp;
+        <i class="fa-solid fa-triangle-exclamation text-warning"></i><br />
+        <a href="{{ config.url_discogs }}" target="_blank" class="btn btn-primary btn-sm">Allow Discogs access</a>
+      {% endif %}
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap5_all.min.js"></script>
+  <script src="{{ url_for('static', filename='progress_etl.js') }}"></script>
+{% endblock %}

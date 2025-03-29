@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="position-relative text-center">
+    <img src="static/images/vinyl_record.jpg" class="img-fluid rounded" alt="Vinyl Record" />
+    <!-- Overlay for heading -->
+    <div class="position-absolute top-0 start-0 text-light mx-4 my-4">
+      <h2 class="text-shadow">Rediscover Your Music Collection</h2>
+    </div>
+    <!-- Overlay for buttons -->
+    <div class="position-absolute bottom-0 end-0">
+      <div class="btn-group">
+        <a href="/config" class="btn btn-lg text-shadow btn-link custom-btn link-hover"><h4>Configuration</h4></a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <p>
+    Do you ever feel like you're listening to the same albums over and over? With this app, you can breathe new life into your music by getting random recommendations for artists or records you own and registered on Discogs .
+<br><br>
+🎵 Explore Your Collection Differently – Let the app surprise you with albums you may have forgotten.<br>
+🔀 Randomized Suggestions – Get inspired by unexpected picks from your collection.<br>
+📀 Perfect for Large Collections – No more decision fatigue—just hit refresh and start listening!<br>
+<br>
+Start rediscovering your music today!
+  </p>
+
+{% endblock %}
