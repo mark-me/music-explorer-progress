@@ -25,6 +25,6 @@ Slimmed down to bare essentials for progress
 #### Running the project
 
 Run the celery worker to be able to debug the project:
-    * Start the celery worker, make sure you keep this command running in a terminal. This allows the script to fire op load jobs:
-       * ```celery --app=app_explorer.celery_config worker --loglevel=info```
-    * Start a debug session with the file ```src/app_explorer/app.py``` from your editor of choice.
+* Start the celery worker, make sure you keep this command running in a terminal. This allows the script to fire op load jobs:
+  * ```celery --app=app_explorer.celery_config worker --loglevel=info```
+* Start a debug session with the file ```src/app_explorer/app.py``` from your editor of choice.
